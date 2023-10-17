@@ -1,9 +1,9 @@
 import "./App.css";
-import ListOfGifs from "./components/ListOfGifs";
 
 import { Route } from "wouter";
-import Links from "./components/Link";
+import Links from "./components/Links";
 import Home from "./pages/Home";
+import SearchResults from "./pages/SearchResults";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <h1>App</h1>
         <Links />
         <Route component={Home} path="/" />
-        <Route component={ListOfGifs} path="/gif/:keyword" />
+        <Route component={SearchResults} path="/search/:keyword" />
       </section>
     </div>
   );
