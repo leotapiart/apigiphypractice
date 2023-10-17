@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const apiKEY = "U0N1cwjKdzCMYE19ofV99xlRev9CSG9S";
 
 const dataFetch = async ({ keyword = "gatos" } = {}) => {

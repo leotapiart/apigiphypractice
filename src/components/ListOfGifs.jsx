@@ -3,13 +3,20 @@ import Gif from "./Gif";
 import getGifs from "../services/getGifs";
 
 const ListOfGifs = ({ params }) => {
-  const {keyword} = params
+  const { keyword } = params;
+  const [loading, setLoading] = useState(false);
 
   const [gifs, setGifs] = useState([]);
 
   useEffect(() => {
-    getGifs({ keyword }).then((gifs) => setGifs(gifs));
+    setLoading(true);
+    getGifs({ keyword }).then((gifs) => {
+      setGifs(gifs);
+      setLoading(false);
+    });
   }, [keyword]); //sin depedencias;
+
+  if (loading) return <i>🐸 Cargando...</i>;
 
   return (
     <div>
