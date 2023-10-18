@@ -13,8 +13,7 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //NAVEGAR A OTRA RUTA
-    pushLocation(`/search/${keyword}`);
+    pushLocation(`/search/${keyword}`); //NAVEGAR A OTRA RUTA
   };
 
   const handleChange = (e) => {

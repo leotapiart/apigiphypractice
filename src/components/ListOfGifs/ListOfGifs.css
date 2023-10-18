@@ -3,27 +3,24 @@
 }
 
 .ListOfGifs {
-  column-count: var(--results-columns);
-  column-gap: 0.5m;
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0 16px;
 }
 
 .ListOfGifs-item {
-  -webkit-column-break-inside: avoid;
   background-color: #eee;
-  display: inline-block;
-  width: 100%;
 }
 
-@media screen and (min-width: 37.5rem) {
+@media (min-width: 600px) {
   :root {
-    --gridList-column: 180px;
-    --gridList-rows: 200px;
+    --results-columns: 3;
   }
 }
 
-@media screen and (min-width: 60rem) {
+@media (min-width: 800px) {
   :root {
-    --gridList-column: 300px;
-    --gridList-rows: 210px;
+    --results-columns: 4;
   }
 }

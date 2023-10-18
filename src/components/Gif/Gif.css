@@ -1,14 +1,13 @@
 .Gif {
-  --gifShadow-size: var(--gridList-gap, 6px);
-  margin-bottom: 0.5em;
+  --gifShadow-size: var(--gridList-gap, 3px);
   position: relative;
+  margin-bottom: 10px;
 }
 
 .Gif-buttons {
   position: absolute;
   top: 8px;
   right: 8px;
-  z-index: 1;
 }
 
 .Gif-link {
@@ -38,11 +37,6 @@ i {
   font-size: 80px;
 }
 
-.Gif {
-  margin-bottom: 0;
-}
-
-.Gif,
 .Gif-link {
   height: 100%;
 }
